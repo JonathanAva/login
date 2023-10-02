@@ -1,0 +1,76 @@
+$form-bg: #13232f;
+$white: #000000;
+
+$main: #000000;
+$main-light: lighten($main, 5%);
+$main-dark: darken($main, 5%);
+
+$gray-light: #000000;
+$gray: #000000;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+    background-image: url("./fondo.jpeg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    font-family: 'Titillium Web', sans-serif;  
+    
+  }
+  
+a {
+  text-decoration: none;
+  color: $main;
+  transition: 0.5s ease;
+  &:hover {
+    color: $main-dark;
+  }
+}
+
+
+.form {
+  background: rgba($form-bg, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: $br;
+  box-shadow: 0 4px 10px 4px rgba($form-bg, 0.3);
+}
+
+
+.tab a {
+   
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba($gray-light, .25);
+    color: $gray-light;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease; 
+  }
+  
+
+  .tab a.active {
+    background: $main;
+    color: $white;
+  }
+
+ 
